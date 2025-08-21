@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3 uid="uid://d13l34njm1pe6"]
+
+[ext_resource type="Script" path="res://Scenes/bomb.gd" id="1_ajbix"]
+[ext_resource type="Texture2D" uid="uid://d2bc2sglxrhlb" path="res://Assets/Explosion Ball.png" id="1_x72cv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ursbv"]
+atlas = ExtResource("1_x72cv")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7bfwp"]
+atlas = ExtResource("1_x72cv")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lgdn5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ursbv")
+}, {
+"duration": 1.1,
+"texture": SubResource("AtlasTexture_7bfwp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0qujj"]
+radius = 82.0244
+
+[node name="Bomb" type="Area2D"]
+collision_layer = 0
+collision_mask = 32
+script = ExtResource("1_ajbix")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2.6875, 2.6875)
+sprite_frames = SubResource("SpriteFrames_lgdn5")
+autoplay = "default"
+frame_progress = 0.553026
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_0qujj")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

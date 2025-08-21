@@ -1,0 +1,31 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://5eewycjxbsq8"]
+
+[ext_resource type="FontFile" uid="uid://dxij5r02y0ivv" path="res://Themes/HARLOWSI.TTF" id="1_qqo2k"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ot0ux"]
+bg_color = Color(0.290196, 0.65098, 0.772549, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s4glw"]
+bg_color = Color(0.290196, 0.701961, 0.317647, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_trwoi"]
+bg_color = Color(0.266667, 0.0470588, 0.807843, 1)
+corner_radius_top_left = 90
+corner_radius_top_right = 90
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r25wv"]
+bg_color = Color(0.454902, 0.627451, 0.717647, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h5hjc"]
+bg_color = Color(0.203922, 0.490196, 0.85098, 1)
+
+[resource]
+default_font = ExtResource("1_qqo2k")
+default_font_size = 24
+Button/styles/focus = SubResource("StyleBoxFlat_ot0ux")
+Button/styles/hover = SubResource("StyleBoxFlat_s4glw")
+Button/styles/normal = SubResource("StyleBoxFlat_trwoi")
+Button/styles/pressed = SubResource("StyleBoxFlat_r25wv")
+Panel/styles/panel = SubResource("StyleBoxFlat_h5hjc")
