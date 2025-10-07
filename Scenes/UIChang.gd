@@ -1,6 +1,6 @@
 extends CanvasLayer
-@onready var PointLabel = $Control/Panel/VBoxContainer/PointLabel
-@onready var HealthLabel = $Control/Panel/VBoxContainer/HealthLabel
+@onready var PointLabel = $Control/Panel/PointLabel
+@onready var HealthLabel = $Control/Panel2/HealthLabel
 func _ready():
 	PointLabel.text = "Points : 0"
 	HealthLabel.text = "Health : 100"

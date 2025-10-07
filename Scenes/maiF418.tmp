@@ -3996,7 +3996,7 @@ offset_bottom = 636.752
 texture = ExtResource("2_t28rp")
 
 [node name="Player" parent="Node" instance=ExtResource("2_oweys")]
-position = Vector2(521, 308)
+position = Vector2(1055, 548)
 
 [node name="SpeedCooldown" type="Timer" parent="Node/Player"]
 wait_time = 10.0
@@ -4015,10 +4015,7 @@ script = ExtResource("6_mi72q")
 [node name="Control" type="Control" parent="UI"]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 1.0
-offset_top = 606.0
-offset_right = 1.0
-offset_bottom = 606.752
+offset_bottom = 0.751995
 theme = ExtResource("6_hhgxo")
 
 [node name="Panel" type="Panel" parent="UI/Control"]
@@ -4028,31 +4025,21 @@ anchor_left = -0.139757
 anchor_top = -0.158951
 anchor_right = -0.139757
 anchor_bottom = -0.158951
-offset_left = 968.0
-offset_top = 4.11953
-offset_right = 1141.0
-offset_bottom = 39.1195
+offset_right = 172.59
+offset_bottom = 61.358
 
-[node name="PointLabel" type="Label" parent="UI/Control/Panel"]
-layout_mode = 2
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/Control/Panel"]
+layout_mode = 0
 offset_right = 220.0
-offset_bottom = 31.0
+offset_bottom = 56.0
+
+[node name="PointLabel" type="Label" parent="UI/Control/Panel/VBoxContainer"]
+layout_mode = 2
 text = "Points:"
 metadata/_edit_use_anchors_ = true
 
-[node name="Panel2" type="Panel" parent="UI/Control"]
-layout_mode = 0
-offset_left = -1.0
-offset_top = -7.0
-offset_right = 174.0
-offset_bottom = 33.0
-
-[node name="HealthLabel" type="Label" parent="UI/Control/Panel2"]
+[node name="HealthLabel" type="Label" parent="UI/Control/Panel/VBoxContainer"]
 layout_mode = 2
-offset_left = 3.0
-offset_top = 3.11951
-offset_right = 223.0
-offset_bottom = 34.1195
 text = "Health:"
 
 [connection signal="timeout" from="Node/Timer" to="Node" method="_on_timer_timeout"]

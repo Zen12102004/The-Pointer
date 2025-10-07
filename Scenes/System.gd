@@ -16,9 +16,9 @@ var health: int = 100:
 var aoc = 0
 func add_points(i):
 	_point += i;
-	if _point >= 20:
+	if _point >= 10:
 		LimitSpawn = 13
-	if _point >= 30:
+	if _point >= 20:
 		LimitSpawn = 20
 
 func healing(i):

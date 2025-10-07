@@ -46,11 +46,11 @@ func _on_timer_timeout():
 				var rheight = rng.randf_range(10,500)
 				gen_collec(Vector2(rweidth,rheight))
 				System.aoc += 1
-		elif decide_consumable in range(7,11):
+		elif decide_consumable in range(6,11):
 			var rweidth = rng.randf_range(10,1000)
 			var rheight = rng.randf_range(10,500)
 			gen_bomb(Vector2(rweidth,rheight))
-		elif decide_consumable in range(12,16):
+		elif decide_consumable in range(10,16):
 			var rweidth = rng.randf_range(10,1000)
 			var rheight = rng.randf_range(10,500)
 			gen_sblade(Vector2(rweidth,rheight))
@@ -58,7 +58,7 @@ func _on_timer_timeout():
 			var rweidth = rng.randf_range(10,1000)
 			var rheight = rng.randf_range(10,500)
 			gen_hgem(Vector2(rweidth,rheight))
-		elif  decide_consumable in range(20,20):
+		elif  decide_consumable in range(19,20):
 			var rweidth = rng.randf_range(10,1000)
 			var rheight = rng.randf_range(10,500)
 			gen_ggem(Vector2(rweidth,rheight))
